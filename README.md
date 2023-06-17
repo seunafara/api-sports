@@ -45,6 +45,7 @@ sports.football('endpoint', { param1: 'value1', param2: 'value2' })
 ### `football(url, params)`
 
 Makes a GET request to the football API endpoints.
+[API Docs](https://rapidapi.com/api-sports/api/api-football/)
 
 - `url`: The endpoint URL (as a string).
 - `params`: An object of query parameters.
@@ -54,6 +55,7 @@ Returns a Promise that resolves with the response data.
 ### `basketball(url, params)`
 
 Makes a GET request to the basketball API endpoints.
+[API Docs](https://rapidapi.com/api-sports/api/api-basketball/)
 
 - `url`: The endpoint URL (as a string).
 - `params`: An object of query parameters.
