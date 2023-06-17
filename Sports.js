@@ -7,6 +7,7 @@ const options = {
 const URLS = {
   football: "v3.football.api-sports.io",
   basketball: "v1.basketball.api-sports.io",
+  baseball: "v1.baseball.api-sports.io",
 };
 
 class Sports {
@@ -36,6 +37,7 @@ class Sports {
 
   football = (url, params) => this.#request(url, params, URLS.football);
   basketball = (url, params) => this.#request(url, params, URLS.basketball);
+  baseball = (url, params) => this.#request(url, params, URLS.baseball);
 }
 
 export default Sports;

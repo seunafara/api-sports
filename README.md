@@ -62,6 +62,16 @@ Makes a GET request to the basketball API endpoints.
 
 Returns a Promise that resolves with the response data.
 
+### `baseball(url, params)`
+
+Makes a GET request to the baseball API endpoints.
+[API Docs](https://rapidapi.com/api-sports/api/api-baseball/)
+
+- `url`: The endpoint URL (as a string).
+- `params`: An object of query parameters.
+
+Returns a Promise that resolves with the response data.
+
 ## Contributing
 
 Contributions are welcome! Please submit a pull request or create an issue to get started.
