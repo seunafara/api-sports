@@ -1,14 +1,14 @@
 {
   "name": "api-sports",
   "version": "1.0.2",
-  "description": "",
+  "description": "An easy-to-use Node.js wrapper for the API Sports service.",
   "main": "Sports.js",
   "type": "module",
   "scripts": {
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["api-football", "api-sports", "api-baseball", "api-basketball"],
+  "author": "Oluseun Afara",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.4.0"
