@@ -1,6 +1,6 @@
 {
   "name": "api-sports",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "An easy-to-use Node.js wrapper for the API Sports service.",
   "main": "Sports.js",
   "type": "module",
@@ -13,6 +13,7 @@
   "dependencies": {
     "axios": "^1.4.0"
   },
+  "repository": "https://github.com/seunafara/api-sports",
   "devDependencies": {
     "@babel/core": "^7.22.5",
     "@babel/preset-env": "^7.22.5",
