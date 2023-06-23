@@ -1,8 +1,8 @@
-import axios from "axios";
+import axios from "axios"
 
 const options = {
-  method: "GET",
-};
+	method: "GET",
+}
 
 const SPORTS = {
 	americanFootball: {
@@ -53,8 +53,8 @@ class Sports {
 		this.options = options
 	}
 
-	#request = (url, params, sport) => 
-    new Promise((resolve, reject) =>
+	#request = (url, params, sport) =>
+		new Promise((resolve, reject) =>
 			axios
 				.request({
 					...options,
@@ -73,7 +73,8 @@ class Sports {
 				}),
 		)
 
-	americanFootball = (url, params) => this.#request(url, params, SPORTS.americanFootball)
+	americanFootball = (url, params) =>
+		this.#request(url, params, SPORTS.americanFootball)
 	basketball = (url, params) => this.#request(url, params, SPORTS.basketball)
 	baseball = (url, params) => this.#request(url, params, SPORTS.baseball)
 	football = (url, params) => this.#request(url, params, SPORTS.football)
@@ -85,4 +86,4 @@ class Sports {
 	volleyball = (url, params) => this.#request(url, params, SPORTS.volleyball)
 }
 
-export default Sports;
+export default Sports
