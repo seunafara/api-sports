@@ -42,10 +42,10 @@ sports.football('endpoint', { param1: 'value1', param2: 'value2' })
 
 ## Methods
 
-### `football(url, params)`
+### `americanFootball(url, params)`
 
-Makes a GET request to the football API endpoints.
-[API Docs](https://rapidapi.com/api-sports/api/api-football/)
+Makes a GET request to the american football API endpoints.
+[API Docs](https://rapidapi.com/api-sports/api/api-american-football//)
 
 - `url`: The endpoint URL (as a string).
 - `params`: An object of query parameters.
@@ -66,6 +66,46 @@ Returns a Promise that resolves with the response data.
 
 Makes a GET request to the baseball API endpoints.
 [API Docs](https://rapidapi.com/api-sports/api/api-baseball/)
+
+- `url`: The endpoint URL (as a string).
+- `params`: An object of query parameters.
+
+Returns a Promise that resolves with the response data.
+
+### `football(url, params)`
+
+Makes a GET request to the football API endpoints.
+[API Docs](https://rapidapi.com/api-sports/api/api-football/)
+
+- `url`: The endpoint URL (as a string).
+- `params`: An object of query parameters.
+
+Returns a Promise that resolves with the response data.
+
+### `formula1(url, params)`
+
+Makes a GET request to the formula 1 API endpoints.
+[API Docs](https://rapidapi.com/api-sports/api/api-formula-1/)
+
+- `url`: The endpoint URL (as a string).
+- `params`: An object of query parameters.
+
+Returns a Promise that resolves with the response data.
+
+### `handball(url, params)`
+
+Makes a GET request to the handball API endpoints.
+[API Docs](https://rapidapi.com/api-sports/api/api-handball/)
+
+- `url`: The endpoint URL (as a string).
+- `params`: An object of query parameters.
+
+Returns a Promise that resolves with the response data.
+
+### `hockey(url, params)`
+
+Makes a GET request to the hockey API endpoints.
+[API Docs](https://rapidapi.com/api-sports/api/api-hockey/)
 
 - `url`: The endpoint URL (as a string).
 - `params`: An object of query parameters.

@@ -4,40 +4,70 @@ const options = {
   method: "GET",
 };
 
-const URLS = {
-  football: "v3.football.api-sports.io",
-  basketball: "v1.basketball.api-sports.io",
-  baseball: "v1.baseball.api-sports.io",
-};
+const SPORTS = {
+	americanFootball: {
+		url: "api-american-football.p.rapidapi.com/",
+		host: "api-american-football.p.rapidapi.com/",
+	},
+	basketball: {
+		url: "api-basketball.p.rapidapi.com/",
+		host: "api-basketball.p.rapidapi.com/",
+	},
+	baseball: {
+		url: "api-baseball.p.rapidapi.com/",
+		host: "api-baseball.p.rapidapi.com/",
+	},
+	football: {
+		url: "api-football-v1.p.rapidapi.com/v3/",
+		host: "api-football-v1.p.rapidapi.com",
+	},
+	formula1: {
+		url: "api-formula-1.p.rapidapi.com/",
+		host: "api-formula-1.p.rapidapi.com/",
+	},
+	handball: {
+		url: "api-handball.p.rapidapi.com/",
+		host: "api-handball.p.rapidapi.com/",
+	},
+	hockey: {
+		url: "api-hockey.p.rapidapi.com/",
+		host: "api-hockey.p.rapidapi.com/",
+	},
+}
 
 class Sports {
-  constructor(API_KEY) {
-    this.API_KEY = API_KEY;
-  }
+	constructor(API_KEY) {
+		this.API_KEY = API_KEY
+		this.options = options
+	}
 
-  #request = (url, params, host) =>
+	#request = (url, params, sport) => 
     new Promise((resolve, reject) =>
-      axios
-        .request({
-          ...options,
-          url: `https://${host}/${url}`,
-          params,
-          headers: {
-            "X-RapidAPI-Key": this.API_KEY,
-            "X-RapidAPI-Host": host,
-          },
-        })
-        .then(function (response) {
-          resolve(response.data);
-        })
-        .catch(function (error) {
-          reject(error);
-        })
-    );
+			axios
+				.request({
+					...options,
+					url: `https://${sport.url}${url}/`,
+					params,
+					headers: {
+						"X-RapidAPI-Key": this.API_KEY,
+						"X-RapidAPI-Host": sport.host,
+					},
+				})
+				.then(function (response) {
+					resolve(response.data)
+				})
+				.catch(function (error) {
+					reject(error)
+				}),
+		)
 
-  football = (url, params) => this.#request(url, params, URLS.football);
-  basketball = (url, params) => this.#request(url, params, URLS.basketball);
-  baseball = (url, params) => this.#request(url, params, URLS.baseball);
+	americanFootball = (url, params) => this.#request(url, params, SPORTS.americanFootball)
+	basketball = (url, params) => this.#request(url, params, SPORTS.basketball)
+	baseball = (url, params) => this.#request(url, params, SPORTS.baseball)
+	football = (url, params) => this.#request(url, params, SPORTS.football)
+	formula1 = (url, params) => this.#request(url, params, SPORTS.formula1)
+	handball = (url, params) => this.#request(url, params, SPORTS.handball)
+	hockey = (url, params) => this.#request(url, params, SPORTS.hockey)
 }
 
 export default Sports;
