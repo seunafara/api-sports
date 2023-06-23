@@ -57,60 +57,51 @@ Returns a Promise that resolves with the response data.
 Makes a GET request to the basketball API endpoints.
 [API Docs](https://rapidapi.com/api-sports/api/api-basketball/)
 
-- `url`: The endpoint URL (as a string).
-- `params`: An object of query parameters.
-
-Returns a Promise that resolves with the response data.
 
 ### `baseball(url, params)`
 
 Makes a GET request to the baseball API endpoints.
 [API Docs](https://rapidapi.com/api-sports/api/api-baseball/)
 
-- `url`: The endpoint URL (as a string).
-- `params`: An object of query parameters.
-
-Returns a Promise that resolves with the response data.
 
 ### `football(url, params)`
 
 Makes a GET request to the football API endpoints.
 [API Docs](https://rapidapi.com/api-sports/api/api-football/)
 
-- `url`: The endpoint URL (as a string).
-- `params`: An object of query parameters.
-
-Returns a Promise that resolves with the response data.
 
 ### `formula1(url, params)`
 
 Makes a GET request to the formula 1 API endpoints.
 [API Docs](https://rapidapi.com/api-sports/api/api-formula-1/)
 
-- `url`: The endpoint URL (as a string).
-- `params`: An object of query parameters.
-
-Returns a Promise that resolves with the response data.
 
 ### `handball(url, params)`
 
 Makes a GET request to the handball API endpoints.
 [API Docs](https://rapidapi.com/api-sports/api/api-handball/)
 
-- `url`: The endpoint URL (as a string).
-- `params`: An object of query parameters.
-
-Returns a Promise that resolves with the response data.
 
 ### `hockey(url, params)`
 
 Makes a GET request to the hockey API endpoints.
 [API Docs](https://rapidapi.com/api-sports/api/api-hockey/)
 
-- `url`: The endpoint URL (as a string).
-- `params`: An object of query parameters.
+### `nba(url, params)`
 
-Returns a Promise that resolves with the response data.
+Makes a GET request to the nba API endpoints.
+[API Docs](https://rapidapi.com/api-sports/api/api-nba/)
+
+### `rugby(url, params)`
+
+Makes a GET request to the rugby API endpoints.
+[API Docs](https://rapidapi.com/api-sports/api/api-rugby/)
+
+### `volleyball(url, params)`
+
+Makes a GET request to the volleyball API endpoints.
+[API Docs](https://rapidapi.com/api-sports/api/api-volleyball/)
+
 
 ## Contributing
 

@@ -33,6 +33,18 @@ const SPORTS = {
 		url: "api-hockey.p.rapidapi.com/",
 		host: "api-hockey.p.rapidapi.com/",
 	},
+	nba: {
+		url: "api-nba-v1.p.rapidapi.com/",
+		host: "api-nba-v1.p.rapidapi.com/",
+	},
+	rugby: {
+		url: "api-rugby.p.rapidapi.com/",
+		host: "api-rugby.p.rapidapi.com/",
+	},
+	volleyball: {
+		url: "api-rugby.p.rapidapi.com/",
+		host: "api-rugby.p.rapidapi.com/",
+	},
 }
 
 class Sports {
@@ -68,6 +80,9 @@ class Sports {
 	formula1 = (url, params) => this.#request(url, params, SPORTS.formula1)
 	handball = (url, params) => this.#request(url, params, SPORTS.handball)
 	hockey = (url, params) => this.#request(url, params, SPORTS.hockey)
+	nba = (url, params) => this.#request(url, params, SPORTS.nba)
+	rugby = (url, params) => this.#request(url, params, SPORTS.rugby)
+	volleyball = (url, params) => this.#request(url, params, SPORTS.volleyball)
 }
 
 export default Sports;
