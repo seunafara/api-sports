@@ -1,5 +1,12 @@
 import axios from "axios"
 
+function checkURL(url, character = "/") {
+	if (url.includes(character)) {
+		url = url.replace(character, "")
+	}
+	return url
+}
+
 const options = {
 	method: "GET",
 }
@@ -53,12 +60,12 @@ class Sports {
 		this.options = options
 	}
 
-	#request = (url, params, sport) =>
+	#request = (url, params, sport) => 
 		new Promise((resolve, reject) =>
 			axios
 				.request({
 					...this.options,
-					url: `https://${sport.url}${url}/`,
+					url: `https://${sport.url}${checkURL(url)}/`,
 					params,
 					headers: {
 						"X-RapidAPI-Key": this.API_KEY,
