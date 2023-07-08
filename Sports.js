@@ -42,8 +42,8 @@ const SPORTS = {
 		host: "api-rugby.p.rapidapi.com/",
 	},
 	volleyball: {
-		url: "api-rugby.p.rapidapi.com/",
-		host: "api-rugby.p.rapidapi.com/",
+		url: "api-volleyball.p.rapidapi.com/",
+		host: "api-volleyball.p.rapidapi.com/",
 	},
 }
 
@@ -57,7 +57,7 @@ class Sports {
 		new Promise((resolve, reject) =>
 			axios
 				.request({
-					...options,
+					...this.options,
 					url: `https://${sport.url}${url}/`,
 					params,
 					headers: {
