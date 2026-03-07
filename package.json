@@ -1,6 +1,6 @@
 {
   "name": "api-sports",
-  "version": "1.0.8_cdu-0.0.1",
+  "version": "1.0.9",
   "description": "An easy-to-use Node.js wrapper for the API Sports service.",
   "main": "Sports.js",
   "type": "module",
