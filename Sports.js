@@ -1,5 +1,3 @@
-import axios from "axios"
-
 function checkURL(url, character = "/") {
 	if (url.includes(character)) {
 		url = url.replace(character, "")
@@ -12,46 +10,16 @@ const options = {
 }
 
 const SPORTS = {
-	americanFootball: {
-		url: "api-american-football.p.rapidapi.com/",
-		host: "api-american-football.p.rapidapi.com/",
-	},
-	basketball: {
-		url: "api-basketball.p.rapidapi.com/",
-		host: "api-basketball.p.rapidapi.com/",
-	},
-	baseball: {
-		url: "api-baseball.p.rapidapi.com/",
-		host: "api-baseball.p.rapidapi.com/",
-	},
-	football: {
-		url: "api-football-v1.p.rapidapi.com/v3/",
-		host: "api-football-v1.p.rapidapi.com",
-	},
-	formula1: {
-		url: "api-formula-1.p.rapidapi.com/",
-		host: "api-formula-1.p.rapidapi.com/",
-	},
-	handball: {
-		url: "api-handball.p.rapidapi.com/",
-		host: "api-handball.p.rapidapi.com/",
-	},
-	hockey: {
-		url: "api-hockey.p.rapidapi.com/",
-		host: "api-hockey.p.rapidapi.com/",
-	},
-	nba: {
-		url: "api-nba-v1.p.rapidapi.com/",
-		host: "api-nba-v1.p.rapidapi.com/",
-	},
-	rugby: {
-		url: "api-rugby.p.rapidapi.com/",
-		host: "api-rugby.p.rapidapi.com/",
-	},
-	volleyball: {
-		url: "api-volleyball.p.rapidapi.com/",
-		host: "api-volleyball.p.rapidapi.com/",
-	},
+	americanFootball: "v1.afl.api-sports.io/",
+	basketball: "v1.basketball.api-sports.io/",
+	baseball: "v1.baseball.api-sports.io/",
+	football: "v3.football.api-sports.io/",
+	formula1: "v1.formula-1.api-sports.io/",
+	handball: "v1.handball.api-sports.io/",
+	hockey: "v1.hockey.api-sports.io/",
+	nba: "v2.nba.api-sports.io/",
+	rugby: "v1.rugby.api-sports.io/",
+	volleyball: "v1.volleyball.api-sports.io/",
 }
 
 class Sports {
@@ -60,25 +28,22 @@ class Sports {
 		this.options = options
 	}
 
-	#request = (url, params, sport) => 
-		new Promise((resolve, reject) =>
-			axios
-				.request({
-					...this.options,
-					url: `https://${sport.url}${checkURL(url)}/`,
-					params,
-					headers: {
-						"X-RapidAPI-Key": this.API_KEY,
-						"X-RapidAPI-Host": sport.host,
-					},
-				})
-				.then(function (response) {
-					resolve(response.data)
-				})
-				.catch(function (error) {
-					reject(error)
-				}),
-		)
+	#request = (url, params, sport) => {
+    return new Promise((resolve, reject) => {
+      var myHeaders = new Headers();
+      myHeaders.append("x-apisports-key", this.API_KEY);
+      var requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        redirect: 'follow'
+      };
+      const queryParams = new URLSearchParams(params)
+      fetch(`https://${sport}${checkURL(url)}?${queryParams}`, requestOptions)
+        .then(response => response.json())
+        .then(result => resolve(result))
+        .catch(error => reject(error));
+    })
+  }
 
 	americanFootball = (url, params) =>
 		this.#request(url, params, SPORTS.americanFootball)

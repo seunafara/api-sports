@@ -34,11 +34,11 @@ const sports = new Sports('your-api-key');
 You can then use any of the available methods to make requests to the API. For example, if we to make a request to the football endpoint, the football method takes two parameters: the endpoint URL (as a string), and an object of query parameters:
 
 ```javascript
-sports.football('leagues', { id: 39 }) // can also be /leagues
+sports.football('leagues', { id: 39 }) // || /leagues
   .then(data => console.log(data))
   .catch(error => console.error(error));
 
-// should return
+// should log
 {
   // ...
   response: [
