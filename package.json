@@ -7,13 +7,18 @@
   "scripts": {
     "test": "jest"
   },
-  "keywords": ["api-football", "api-sports", "api-baseball", "api-basketball"],
+  "keywords": [
+    "api-football",
+    "api-sports",
+    "api-baseball",
+    "api-basketball"
+  ],
   "author": "Oluseun Afara",
   "license": "ISC",
-  "dependencies": {
-    "axios": "^1.4.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seunafara/api-sports.git"
   },
-  "repository": "https://github.com/seunafara/api-sports",
   "homepage": "https://github.com/seunafara/api-sports#readme",
   "devDependencies": {
     "@babel/core": "^7.22.5",
