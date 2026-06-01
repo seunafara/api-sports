@@ -1,8 +1,5 @@
-function checkURL(url, character = "/") {
-	if (url.includes(character)) {
-		url = url.replace(character, "")
-	}
-	return url
+function checkURL(url) {
+	return String(url).replace(/^\/+|\/+$/g, "")
 }
 
 const options = {
